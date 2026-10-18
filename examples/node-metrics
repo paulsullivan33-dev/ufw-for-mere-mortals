@@ -1,0 +1,4 @@
+[Node Metrics]
+title=Node metrics exporter
+description=Prometheus-style node metrics endpoint, plain HTTP.
+ports=9100/tcp

@@ -1,0 +1,24 @@
+site_name: UFW for Mere Mortals
+site_description: Plain-language UFW — what a host firewall is, the vocabulary, the rules, the lockout drill, and a small server hardened step by step, verified against a real install wherever the build machine allowed and marked documented where it could not.
+site_url: https://paulsullivan33-dev.github.io/ufw-for-mere-mortals/
+
+# Guides live at the repo root (nice for GitHub browsing).
+# The deploy workflow copies them into docs/ before building.
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - What a Firewall Is: what-a-firewall-is.md
+  - The Vocabulary: the-vocabulary.md
+  - Meet UFW: meet-ufw.md
+  - First Rules: first-rules.md
+  - Reading Your Firewall: reading-your-firewall.md
+  - Rules with Addresses: rules-with-addresses.md
+  - Limiting and Profiles: limiting-and-profiles.md
+  - A Worked Example: worked-example.md
+  - IPv6: ipv6.md
+  - Forwarding and NAT: forwarding-and-nat.md
+  - Troubleshooting: troubleshooting.md
+  - Glossary: glossary.md
+  - Writing Criteria: criteria.md

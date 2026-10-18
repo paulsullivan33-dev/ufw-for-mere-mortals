@@ -1,0 +1,73 @@
+UFW commands — the everyday set from "UFW for Mere Mortals"
+=============================================================
+
+Outputs quoted in the guide were captured from
+ufw 0.36.2. Commands that change a *running*
+firewall are marked (documented) in the guide
+where the build machine could not run them;
+everything else was run for real.
+
+
+LOOKING
+-------
+    ufw status                is it on, and the short rule list
+    ufw status verbose        defaults, logging, and the rules
+    ufw status numbered       the rules, numbered for deleting
+    ufw show added            the rules you added, as commands
+    ufw show raw              the kernel rules, untranslated
+    ufw show builtins         the built-in chains, as loaded
+    ufw show listening        listening services and their rules
+    ufw version               which UFW this is
+
+
+DEFAULTS AND SWITCHES
+---------------------
+    ufw default deny incoming     the posture: closed unless opened
+    ufw default allow outgoing    the machine may still call out
+    ufw default deny outgoing     stricter; breaks more than you expect
+    ufw enable                    put the recorded rules in force
+    ufw disable                   take them back out
+    ufw reload                    re-apply after editing UFW's files
+    ufw reset                     back to factory, with backups kept
+    ufw logging on                log blocked packets (low level)
+    ufw logging off | low | medium | high | full
+
+
+RULES
+-----
+    ufw allow 22/tcp                        a port, one protocol
+    ufw allow 80                          both protocols, both families
+    ufw allow http                          a service name (see /etc/services)
+    ufw allow 6000:6007/tcp                 a range
+    ufw deny 23/tcp                         refuse silently (DROP)
+    ufw reject 23/tcp                       refuse with an answer (REJECT)
+    ufw limit 22/tcp                        allow, but rate-limited
+    ufw allow from 192.168.1.0/24 to any port 9100 proto tcp
+                                            one subnet may reach one port
+    ufw allow in on eth1 to any port 8080 proto tcp
+                                            one interface only
+    ufw allow out 53/udp                    an outgoing rule
+    ufw insert 1 allow 443/tcp              put a rule at a position
+    ufw delete allow 443/tcp                delete by repeating the rule
+    ufw delete 3                            delete by number (see status numbered)
+    ufw route allow in on eth0 out on eth1 to any port 80 proto tcp
+                                            a forwarding rule (chapter 10)
+
+
+PROFILES
+--------
+    ufw app list                  what profiles this machine knows
+    ufw app info OpenSSH          a profile's ports and description
+    ufw allow OpenSSH             open a service by its profile name
+    ufw app update OpenSSH        re-read a changed profile file
+
+
+THE DRY RUN
+-----------
+    ufw --dry-run allow 22/tcp
+
+    Prints the exact netfilter rules UFW would
+    load — every chain, both address families —
+    and changes nothing. The guide's microscope:
+    most "what does this command do?" questions
+    are answered by its output.
