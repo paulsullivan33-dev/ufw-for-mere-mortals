@@ -107,3 +107,19 @@ spare box, a VM, anything with a local console
 don't skip the lockout drill. It is the
 difference between a firewall you configured
 and a firewall you understand.
+
+---
+
+## Part of the series
+
+This guide is one of the [For Mere Mortals](https://paulsullivan33-dev.github.io/mere-mortals/) guides: plain-language guides to the tools programmers and makers use.
+
+Related guides:
+
+- [Fail2Ban for Mere Mortals](https://paulsullivan33-dev.github.io/fail2ban-for-mere-mortals/)
+- [WireGuard for Mere Mortals](https://paulsullivan33-dev.github.io/wireguard-for-mere-mortals/)
+- [Docker for Mere Mortals](https://paulsullivan33-dev.github.io/docker-for-mere-mortals/)
+
+## License
+
+The writing in this guide is licensed under [CC BY 4.0](https://github.com/paulsullivan33-dev/ufw-for-mere-mortals/blob/main/LICENSE). Code examples and lab scripts are licensed under the [MIT License](https://github.com/paulsullivan33-dev/ufw-for-mere-mortals/blob/main/LICENSE-CODE).

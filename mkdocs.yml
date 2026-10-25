@@ -1,6 +1,7 @@
 site_name: UFW for Mere Mortals
 site_description: Plain-language UFW — what a host firewall is, the vocabulary, the rules, the lockout drill, and a small server hardened step by step, verified against a real install wherever the build machine allowed and marked documented where it could not.
 site_url: https://paulsullivan33-dev.github.io/ufw-for-mere-mortals/
+copyright: 'Part of <a href="https://paulsullivan33-dev.github.io/mere-mortals/">For Mere Mortals</a> · Text <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, code MIT'
 
 # Guides live at the repo root (nice for GitHub browsing).
 # The deploy workflow copies them into docs/ before building.
